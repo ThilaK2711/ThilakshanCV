@@ -1,0 +1,138 @@
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.frontend {
+  grid-column: span 2;
+}
+
+.tools {
+  grid-column: span 2;
+}
+
+.category {
+  padding: 1.75rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.8;
+}
+
+.card_frontend::before {
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-indigo));
+}
+
+.card_backend::before {
+  background: linear-gradient(90deg, var(--color-violet), var(--color-pink));
+}
+
+.card_tools::before {
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-cyan));
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.categoryTitle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title_frontend {
+  color: var(--color-cyan);
+}
+
+.title_backend {
+  color: var(--color-violet);
+}
+
+.title_tools {
+  color: var(--color-emerald);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.torusContainer {
+  position: sticky;
+  top: 100px;
+  height: 24rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.1);
+}
+
+.loadingPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(99, 102, 241, 0.05),
+    rgba(99, 102, 241, 0.1)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.cubeContainer {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .skillsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .torusContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frontend,
+  .tools {
+    grid-column: span 1;
+  }
+}

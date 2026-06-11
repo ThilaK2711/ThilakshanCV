@@ -1,0 +1,114 @@
+.contact {
+  padding-bottom: 8rem;
+}
+
+.text {
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.email::before {
+  background: linear-gradient(90deg, var(--color-indigo), var(--color-violet));
+}
+
+.phone::before {
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-emerald));
+}
+
+.location::before {
+  background: linear-gradient(90deg, var(--color-pink), var(--color-orange));
+}
+
+.github::before {
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-cyan));
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.email .label {
+  color: var(--color-violet);
+}
+
+.phone .label {
+  color: var(--color-cyan);
+}
+
+.location .label {
+  color: var(--color-pink);
+}
+
+.github .label {
+  color: var(--color-emerald);
+}
+
+.value {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  transition: color 0.25s ease;
+  word-break: break-word;
+}
+
+a.card:hover .value {
+  color: var(--color-text);
+}
+
+.cta {
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}

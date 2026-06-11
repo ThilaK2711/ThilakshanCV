@@ -1,0 +1,107 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.particleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.loadingPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(99, 102, 241, 0.05),
+    rgba(99, 102, 241, 0.1)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.content p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  max-width: 520px;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-cyan);
+  letter-spacing: 0.02em;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarRing {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarRing::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: var(--radius-lg);
+  background: conic-gradient(
+    from 0deg,
+    var(--color-indigo),
+    var(--color-violet),
+    var(--color-cyan),
+    var(--color-pink),
+    var(--color-indigo)
+  );
+  animation: spin-slow 6s linear infinite;
+  z-index: 0;
+}
+
+.avatarCard {
+  position: relative;
+  z-index: 1;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatAvatar 5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .iconWrapper {
+    order: -1;
+  }
+
+  .particleBackground {
+    display: none;
+  }
+}
