@@ -48,24 +48,7 @@ export function Hero() {
           </StaggerItem>
         </StaggerChildren>
 
-        <StaggerChildren className={styles.visual}>
-          <StaggerItem>
-            <div className={styles.iconCluster}>
-              <div className={styles.iconMain}>
-                <IconBox icon={Code2} variant="indigo" size="xl" />
-              </div>
-              <div className={styles.iconTop}>
-                <IconBox icon={Terminal} variant="cyan" size="lg" />
-              </div>
-              <div className={styles.iconBottom}>
-                <IconBox icon={Cpu} variant="violet" size="lg" />
-              </div>
-              <div className={styles.iconSide}>
-                <IconBox icon={Braces} variant="pink" size="lg" />
-              </div>
-            </div>
-          </StaggerItem>
-        </StaggerChildren>
+
       </div>
     </section>
   );

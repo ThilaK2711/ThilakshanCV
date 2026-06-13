@@ -1,9 +1,9 @@
 "use client";
 
-import { User, MapPin } from "lucide-react";
+import Image from "next/image";
+import { MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { IconBox } from "@/components/ui/IconBox";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import styles from "./About.module.css";
 
@@ -25,7 +25,19 @@ export function About() {
           <FadeIn delay={0.16} direction="left" className={styles.iconWrapper}>
             <div className={styles.avatarRing}>
               <div className={`glass-card ${styles.avatarCard}`}>
-                <IconBox icon={User} variant="indigo" size="xl" />
+                {profile.avatar ? (
+                  <Image
+                    src={profile.avatar}
+                    alt={profile.name}
+                    fill
+                    className={styles.avatarPhoto}
+                    priority
+                  />
+                ) : (
+                  <span className={styles.avatarInitials}>
+                    {profile.name.split(" ").map((n) => n[0]).join("")}
+                  </span>
+                )}
               </div>
             </div>
           </FadeIn>

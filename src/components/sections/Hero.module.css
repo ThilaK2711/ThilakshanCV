@@ -33,60 +33,24 @@
 
 .inner {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
 .content {
-  max-width: 580px;
-}
-
-.visual {
+  max-width: 800px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.iconCluster {
-  position: relative;
-  width: 280px;
-  height: 280px;
-}
 
-.iconMain,
-.iconTop,
-.iconBottom,
-.iconSide {
-  position: absolute;
-}
-
-.iconMain {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: floatAvatar 5s ease-in-out infinite;
-}
-
-.iconTop {
-  top: 0;
-  right: 20px;
-  animation: floatA 6s ease-in-out infinite;
-}
-
-.iconBottom {
-  bottom: 10px;
-  left: 10px;
-  animation: floatB 7s ease-in-out infinite;
-}
-
-.iconSide {
-  top: 30%;
-  left: 0;
-  animation: floatC 8s ease-in-out infinite;
-}
 
 .status {
   display: inline-flex;
@@ -113,7 +77,7 @@
 }
 
 .name {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: clamp(2.75rem, 7vw, 5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -123,16 +87,13 @@
 
 .namePart {
   display: inline-block;
-  background: var(--gradient-text);
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 10s linear infinite;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
 }
 
 .namePart:nth-child(2) {
-  animation-delay: -3s;
+  color: var(--color-cyan);
+  text-shadow: 0 4px 20px rgba(34, 211, 238, 0.2);
 }
 
 .title {
@@ -154,29 +115,18 @@
   max-width: 480px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .actions {
   display: flex;
+  justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
 
-@media (max-width: 900px) {
-  .inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
 
-  .visual {
-    order: -1;
-  }
-
-  .iconCluster {
-    width: 240px;
-    height: 240px;
-  }
-}
 
 @media (max-width: 768px) {
   .content {

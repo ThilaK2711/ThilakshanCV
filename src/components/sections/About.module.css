@@ -56,8 +56,8 @@
 
 .avatarRing {
   position: relative;
-  width: 230px;
-  height: 230px;
+  width: 320px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,12 +83,26 @@
 .avatarCard {
   position: relative;
   z-index: 1;
-  width: 220px;
-  height: 220px;
+  width: 310px;
+  height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: floatAvatar 5s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.avatarPhoto {
+  object-fit: cover;
+  object-position: center top;
+  border-radius: inherit;
+}
+
+.avatarInitials {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-indigo);
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 768px) {
@@ -99,6 +113,16 @@
 
   .iconWrapper {
     order: -1;
+  }
+
+  .avatarRing {
+    width: 260px;
+    height: 260px;
+  }
+
+  .avatarCard {
+    width: 250px;
+    height: 250px;
   }
 
   .particleBackground {
