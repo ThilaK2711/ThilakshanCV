@@ -9,7 +9,7 @@ import styles from "./About.module.css";
 
 export function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="About" title="Who I am" gradient />

@@ -8,12 +8,12 @@ export const profile: Profile = {
   bio: "I'm a Software Engineering undergraduate at SLIIT, passionate about full-stack development. I enjoy working across the stack — from React and Next.js on the frontend to Java, Node.js, and Python on the backend. I'm always learning and eager to take on new challenges.",
   email: "lingeswaranthilakshan@gmail.com",
   phone: "0768638411",
-  address: "Kumbavali Imaiyanam West, Uduppiddy, Jaffna",
+  address: "Jaffna, Sri Lanka",
   location: "Jaffna, Sri Lanka",
   resumeUrl: "/resume/resume.pdf",
-  github: "https://github.com/L.ThilaKshan1127",
+  github: "https://github.com/ThilaK2711",
   avatar: "/images/profile.jpg",
   socialLinks: [
-    { label: "GitHub", url: "https://github.com/L.ThilaKshan1127", icon: "github" }
+    { label: "GitHub", url: "https://github.com/ThilaK2711", icon: "github" }
   ],
 };

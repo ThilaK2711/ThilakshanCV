@@ -21,7 +21,7 @@ export function Skills() {
   >;
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="Skills" title="Core technologies" gradient />

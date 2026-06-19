@@ -11,7 +11,7 @@ export function Hero() {
   const nameParts = profile.name.split(" ");
 
   return (
-    <section id="hero" className={`section ${styles.hero}`}>
+    <section id="hero" className={`section ${styles.hero}`} data-cinematic="section">
       <div className={`container ${styles.inner}`}>
         <StaggerChildren className={styles.content}>
           <StaggerItem>
@@ -47,8 +47,6 @@ export function Hero() {
             </div>
           </StaggerItem>
         </StaggerChildren>
-
-
       </div>
     </section>
   );

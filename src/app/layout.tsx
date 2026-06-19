@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, JetBrains_Mono, Syne } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
+import { CinematicMotion } from "@/components/ui/CinematicMotion";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -57,6 +58,7 @@ export default function RootLayout({
     >
       <body>
         <BackgroundEffects />
+        <CinematicMotion />
         <Header />
         <main>{children}</main>
         <Footer />

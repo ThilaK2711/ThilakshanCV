@@ -8,7 +8,7 @@ import styles from "./Contact.module.css";
 
 export function Contact() {
   return (
-    <section id="contact" className={`section ${styles.contact}`}>
+    <section id="contact" className={`section ${styles.contact}`} data-cinematic="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="Contact" title="Let's connect" gradient />

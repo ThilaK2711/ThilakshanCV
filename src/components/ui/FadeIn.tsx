@@ -29,16 +29,38 @@ export function FadeIn({
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, x: offset.x, y: offset.y, filter: "blur(6px)" }}
+      data-cinematic="reveal"
+      initial={{
+        opacity: 0,
+        x: offset.x,
+        y: offset.y,
+        scale: 0.985,
+        rotateX: 8,
+        filter: "blur(12px)",
+      }}
       animate={
         isInView
-          ? { opacity: 1, x: 0, y: 0, filter: "blur(0px)" }
-          : { opacity: 0, x: offset.x, y: offset.y, filter: "blur(6px)" }
+          ? {
+              opacity: 1,
+              x: 0,
+              y: 0,
+              scale: 1,
+              rotateX: 0,
+              filter: "blur(0px)",
+            }
+          : {
+              opacity: 0,
+              x: offset.x,
+              y: offset.y,
+              scale: 0.985,
+              rotateX: 8,
+              filter: "blur(12px)",
+            }
       }
       transition={{
         type: "spring",
-        stiffness: 80,
-        damping: 18,
+        stiffness: 70,
+        damping: 20,
         delay,
       }}
     >

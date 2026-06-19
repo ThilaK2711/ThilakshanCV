@@ -10,7 +10,7 @@ export function Projects() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="Work" title="Selected projects" gradient />
