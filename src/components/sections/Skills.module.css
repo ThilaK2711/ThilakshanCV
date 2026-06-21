@@ -24,6 +24,15 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  animation: skill-card-float 8s ease-in-out infinite;
+}
+
+.grid > *:nth-child(2) .category {
+  animation-delay: 0.55s;
+}
+
+.grid > *:nth-child(3) .category {
+  animation-delay: 1.1s;
 }
 
 .category::before {
@@ -81,6 +90,18 @@
   gap: 0.5rem;
 }
 
+.badges > * {
+  animation: badge-pop 0.55s ease both;
+}
+
+.badges > *:nth-child(2n) {
+  animation-delay: 0.08s;
+}
+
+.badges > *:nth-child(3n) {
+  animation-delay: 0.16s;
+}
+
 .torusContainer {
   position: sticky;
   top: 100px;
@@ -114,6 +135,27 @@
   overflow: hidden;
   background: rgba(99, 102, 241, 0.05);
   border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+@keyframes skill-card-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes badge-pop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 @media (max-width: 1024px) {

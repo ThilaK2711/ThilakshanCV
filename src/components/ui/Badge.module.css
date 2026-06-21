@@ -8,11 +8,29 @@
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .badge:hover {
   transform: translateY(-2px) scale(1.03);
+}
+
+.badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.badge:hover::after {
+  transform: translateX(120%);
 }
 
 .default {

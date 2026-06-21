@@ -7,16 +7,29 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import styles from "./About.module.css";
 
+const highlights = [
+  "Developer focused on full-stack web and mobile apps",
+  "Always learning new tools, patterns, and technologies",
+  "Interested in clean UI, performance, and practical solutions"
+];
+
 export function About() {
   return (
     <section id="about" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
-          <SectionHeader label="About" title="Who I am" gradient />
+          <SectionHeader label="01" title="About Me" gradient />
         </FadeIn>
         <div className={styles.grid}>
           <FadeIn delay={0.08} className={styles.content}>
             <p>{profile.bio}</p>
+            <ul className={styles.highlights}>
+              {highlights.map((highlight) => (
+                <li key={highlight} className={styles.highlightItem}>
+                  {highlight}
+                </li>
+              ))}
+            </ul>
             <p className={styles.location}>
               <MapPin size={14} aria-hidden="true" />
               {profile.location}

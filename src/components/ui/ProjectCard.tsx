@@ -8,6 +8,7 @@ import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {
   project: Project;
+  delay?: number;
 }
 
 const iconVariants = {
@@ -16,7 +17,7 @@ const iconVariants = {
   mobile: "pink" as const,
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
   const Icon = projectIconMap[project.icon];
   const variant = iconVariants[project.icon];
 
@@ -31,7 +32,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         rotateY: -2,
       }}
       transition={{ type: "spring", stiffness: 220, damping: 18 }}
-      style={{ transformStyle: "preserve-3d" }}
+      style={{
+        transformStyle: "preserve-3d",
+        animationDelay: `${delay}s`,
+      }}
     >
       <div className={styles.iconHeader}>
         <IconBox icon={Icon} variant={variant} size="lg" />

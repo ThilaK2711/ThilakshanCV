@@ -18,7 +18,7 @@ export function Projects() {
         <div className={styles.grid}>
           {featured.map((project, index) => (
             <FadeIn key={project.id} delay={index * 0.1}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} delay={index * 0.45} />
             </FadeIn>
           ))}
         </div>

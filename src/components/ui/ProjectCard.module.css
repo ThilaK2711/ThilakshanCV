@@ -1,6 +1,11 @@
 .card {
   overflow: hidden;
   height: 100%;
+  animation: project-card-float 9s ease-in-out infinite;
+}
+
+.card:hover {
+  animation-play-state: paused;
 }
 
 .iconHeader {
@@ -57,4 +62,14 @@
 .links a:hover {
   color: var(--color-cyan);
   opacity: 0.85;
+}
+
+@keyframes project-card-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
 }

@@ -25,6 +25,14 @@
   color: inherit;
   position: relative;
   overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card::before {
@@ -101,6 +109,19 @@ a.card:hover .value {
 
 .cta {
   display: flex;
+  position: relative;
+  width: fit-content;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: -0.35rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  opacity: 0;
+  animation: cta-pulse 2.4s ease-out infinite;
+  pointer-events: none;
 }
 
 @media (max-width: 640px) {
@@ -110,5 +131,19 @@ a.card:hover .value {
 
   .full {
     grid-column: span 1;
+  }
+}
+
+@keyframes cta-pulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 0;
   }
 }
