@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description:
       "A full-stack web application for managing books, users, and reviews. It includes authentication, catalog management, search, review and rating features, and an admin dashboard built with Spring Boot and MySQL.",
     icon: "dashboard",
-    tags: ["Spring Boot", "MySQL", "Java", "Spring Security", "Thymeleaf"],
+    tags: ["Spring Boot", "MySQL", "Java", "Spring Security"],
     featured: true,
   },
   {
@@ -33,7 +33,6 @@ export const projects: Project[] = [
       "React Native",
       "MongoDB",
       "JWT",
-      "OAuth2",
     ],
     featured: true,
   },
