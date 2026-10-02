@@ -10,7 +10,6 @@ export const profile: Profile = {
   phone: "0768638411",
   address: "Jaffna, Sri Lanka",
   location: "Jaffna, Sri Lanka",
-  resumeUrl: "/resume/resume.pdf",
   github: "https://github.com/ThilaK2711",
   linkedin: "https://www.linkedin.com/in/lingesweran-thilakshan-390253350/",
   avatar: "/images/profile.jpg",

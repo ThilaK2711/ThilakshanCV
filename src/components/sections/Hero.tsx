@@ -61,9 +61,6 @@ export function Hero() {
                   <Button href="#contact" variant="secondary">
                     Contact Me
                   </Button>
-                  <Button href={profile.resumeUrl} variant="secondary">
-                    Resume
-                  </Button>
                 </div>
               </StaggerItem>
               <StaggerItem>

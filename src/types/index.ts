@@ -29,7 +29,6 @@ export interface Profile {
   phone: string;
   address: string;
   location: string;
-  resumeUrl: string;
   github?: string;
   linkedin?: string;
   avatar?: string;
