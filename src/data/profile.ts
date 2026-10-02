@@ -12,8 +12,10 @@ export const profile: Profile = {
   location: "Jaffna, Sri Lanka",
   resumeUrl: "/resume/resume.pdf",
   github: "https://github.com/ThilaK2711",
+  linkedin: "https://www.linkedin.com/in/lingesweran-thilakshan-390253350/",
   avatar: "/images/profile.jpg",
   socialLinks: [
-    { label: "GitHub", url: "https://github.com/ThilaK2711", icon: "github" }
+    { label: "GitHub", url: "https://github.com/ThilaK2711", icon: "github" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/lingesweran-thilakshan-390253350/", icon: "linkedin" },
   ],
 };

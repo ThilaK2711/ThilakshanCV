@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, GitBranch } from "lucide-react";
+import { Mail, MessageCircle, MapPin, GitBranch, BriefcaseBusiness } from "lucide-react";
 import { profile } from "@/data/profile";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -7,11 +7,17 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import styles from "./Contact.module.css";
 
 export function Contact() {
+  const whatsappNumber = "94" + profile.phone.replace(/^0/, "");
+  const whatsappUrl =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=Hi%20Lingeswaran%2C%20I%20found%20your%20portfolio.";
+
   return (
-    <section id="contact" className={`section ${styles.contact}`} data-cinematic="section">
+    <section id="contact" className={"section " + styles.contact} data-cinematic="section">
       <div className="container">
         <FadeIn>
-          <SectionHeader label="Contact" title="Let's connect" gradient />
+          <SectionHeader label="05 · GET IN TOUCH" title="Let’s build something useful" gradient />
         </FadeIn>
         <FadeIn delay={0.08}>
           <p className={styles.text}>
@@ -21,7 +27,7 @@ export function Contact() {
         </FadeIn>
         <div className={styles.grid}>
           <FadeIn delay={0.12}>
-            <a href={`mailto:${profile.email}`} className={`glass-card ${styles.card} ${styles.email}`}>
+            <a href={"mailto:" + profile.email} className={"glass-card " + styles.card + " " + styles.email}>
               <IconBox icon={Mail} variant="violet" size="md" />
               <div className={styles.cardText}>
                 <span className={styles.label}>Email</span>
@@ -30,10 +36,10 @@ export function Contact() {
             </a>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <a href={`tel:${profile.phone}`} className={`glass-card ${styles.card} ${styles.phone}`}>
-              <IconBox icon={Phone} variant="cyan" size="md" />
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={"glass-card " + styles.card + " " + styles.phone}>
+              <IconBox icon={MessageCircle} variant="cyan" size="md" />
               <div className={styles.cardText}>
-                <span className={styles.label}>Phone</span>
+                <span className={styles.label}>WhatsApp</span>
                 <span className={styles.value}>{profile.phone}</span>
               </div>
             </a>
@@ -44,18 +50,34 @@ export function Contact() {
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`glass-card ${styles.card} ${styles.github}`}
+                className={"glass-card " + styles.card + " " + styles.github}
               >
                 <IconBox icon={GitBranch} variant="emerald" size="md" />
                 <div className={styles.cardText}>
                   <span className={styles.label}>GitHub</span>
-                  <span className={styles.value}>L.ThilaKshan1127</span>
+                  <span className={styles.value}>ThilaK2711</span>
+                </div>
+              </a>
+            )}
+          </FadeIn>
+          <FadeIn delay={0.22}>
+            {profile.linkedin && (
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={"glass-card " + styles.card + " " + styles.linkedin}
+              >
+                <IconBox icon={BriefcaseBusiness} variant="cyan" size="md" />
+                <div className={styles.cardText}>
+                  <span className={styles.label}>LinkedIn</span>
+                  <span className={styles.value}>{profile.name}</span>
                 </div>
               </a>
             )}
           </FadeIn>
           <FadeIn delay={0.24}>
-            <div className={`glass-card ${styles.card} ${styles.full} ${styles.location}`}>
+            <div className={"glass-card " + styles.card + " " + styles.full + " " + styles.location}>
               <IconBox icon={MapPin} variant="pink" size="md" />
               <div className={styles.cardText}>
                 <span className={styles.label}>Location</span>
@@ -66,7 +88,7 @@ export function Contact() {
         </div>
         <FadeIn delay={0.24}>
           <div className={styles.cta}>
-            <Button href={`mailto:${profile.email}`} variant="primary">
+            <Button href={"mailto:" + profile.email} variant="primary">
               Say Hello
             </Button>
           </div>

@@ -13,7 +13,7 @@ export function Projects() {
     <section id="projects" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
-          <SectionHeader label="Work" title="Selected projects" gradient />
+          <SectionHeader label="04 · SELECTED WORK" title="Applications built to solve real problems" gradient />
         </FadeIn>
         <div className={styles.grid}>
           {featured.map((project, index) => (

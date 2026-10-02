@@ -23,9 +23,9 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    rgba(99, 102, 241, 0.1),
-    rgba(99, 102, 241, 0.05),
-    rgba(99, 102, 241, 0.1)
+    rgba(125, 211, 252, 0.1),
+    rgba(125, 211, 252, 0.05),
+    rgba(125, 211, 252, 0.1)
   );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
@@ -71,10 +71,11 @@
   text-transform: uppercase;
   color: var(--color-emerald);
   padding: 0.4rem 0.9rem;
-  border: 1px solid rgba(52, 211, 153, 0.25);
+  border: 1px solid rgba(125, 211, 252, 0.32);
   border-radius: var(--radius-full);
-  background: rgba(52, 211, 153, 0.06);
+  background: rgba(125, 211, 252, 0.08);
   margin-bottom: 1.75rem;
+  box-shadow: 0 0 18px rgba(125, 211, 252, 0.08);
 }
 
 .dot {
@@ -102,7 +103,8 @@
 
 .namePart:nth-child(2) {
   color: var(--color-cyan);
-  text-shadow: 0 4px 20px rgba(34, 211, 238, 0.2);
+  text-shadow: 0 4px 20px rgba(125, 211, 252, 0.2);
+  animation: nameFlicker 4.2s linear infinite;
 }
 
 .title {
@@ -182,6 +184,7 @@
   position: relative;
   overflow: hidden;
   animation: hero-panel-float 8s ease-in-out infinite;
+  border: 1px solid rgba(125, 211, 252, 0.16);
 }
 
 .snapshot::before {
@@ -190,8 +193,8 @@
   inset: 1px;
   border-radius: inherit;
   background:
-    radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 35%),
-    radial-gradient(circle at left bottom, rgba(167, 139, 250, 0.1), transparent 40%);
+    radial-gradient(circle at top right, rgba(125, 211, 252, 0.16), transparent 35%),
+    radial-gradient(circle at left bottom, rgba(125, 211, 252, 0.12), transparent 40%);
   pointer-events: none;
 }
 
@@ -226,9 +229,9 @@
   letter-spacing: 0.08em;
   color: var(--color-emerald);
   padding: 0.35rem 0.55rem;
-  border: 1px solid rgba(52, 211, 153, 0.2);
+  border: 1px solid rgba(125, 211, 252, 0.2);
   border-radius: var(--radius-full);
-  background: rgba(52, 211, 153, 0.07);
+  background: rgba(125, 211, 252, 0.08);
 }
 
 .snapshotBody {
@@ -244,8 +247,8 @@
   align-items: start;
   padding: 0.9rem 1rem;
   border-radius: calc(var(--radius) * 0.9);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(125, 211, 252, 0.08);
 }
 
 .snapshotRow p {
@@ -273,9 +276,9 @@
   letter-spacing: 0.04em;
   padding: 0.4rem 0.65rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-text-muted);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(125, 211, 252, 0.06);
+  color: var(--color-cyan);
+  border: 1px solid rgba(125, 211, 252, 0.14);
 }
 
 .scrollCue {
@@ -292,6 +295,22 @@
 
 .scrollCue:hover {
   color: var(--color-text);
+}
+
+@keyframes nameFlicker {
+  0%,
+  18%,
+  22%,
+  60%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(125, 211, 252, 0.25));
+  }
+  20%,
+  21% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 18px rgba(125, 211, 252, 0.45));
+  }
 }
 
 @keyframes hero-card-float {
@@ -351,3 +370,59 @@
     align-items: flex-start;
   }
 }
+
+/* Stitch glass editor hero */
+.snapshot {
+  width: min(100%, 520px);
+  padding: 0;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 1rem;
+  background: rgba(10, 14, 26, 0.78);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36), 0 0 36px rgba(125, 211, 252, 0.06);
+  animation: hero-panel-float 8s ease-in-out infinite;
+}
+.snapshot::before { display: none; }
+.editorBar, .terminalBar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .85rem 1rem; background: rgba(26, 36, 56, .68); border-bottom: 1px solid rgba(160, 180, 196, .12); }
+.windowDots { display: flex; gap: .35rem; }
+.windowDots i { width: .55rem; height: .55rem; border-radius: 50%; background: #fb7185; }
+.windowDots i:nth-child(2) { background: #fbbf24; }
+.windowDots i:nth-child(3) { background: #7dd3fc; }
+.snapshotTitle { color: #a0b4c4; font: 500 .72rem var(--font-mono); }
+.editorLanguage { color: #647b90; font: 500 .6rem var(--font-mono); letter-spacing: .12em; }
+.codeCanvas { overflow-x: auto; padding: 1.15rem .7rem; color: #d3e0ed; font: 500 clamp(.58rem, 1.1vw, .72rem)/1.95 var(--font-mono); white-space: nowrap; }
+.codeCanvas > div { min-height: 1.4em; }
+.lineNumber { display: inline-block; width: 2.2rem; margin-right: .75rem; color: #506174; text-align: right; user-select: none; }
+.codeComment { color: #72859a; }
+.codeKeyword, .codeName { color: #7dd3fc; }
+.codeKey { color: #c8a0f0; }
+.codeString { color: #a8d8e9; }
+.cursor { display: inline-block; width: 2px; height: 1em; margin-left: .2rem; vertical-align: -.15em; background: #7dd3fc; animation: editor-cursor 1s steps(2, start) infinite; }
+@keyframes editor-cursor { to { visibility: hidden; } }
+.terminalBar { border-top: 1px solid rgba(160,180,196,.12); border-bottom: 0; color: #a0b4c4; font: 500 .62rem var(--font-mono); letter-spacing: .06em; }
+.terminalBar > span { display: inline-flex; align-items: center; gap: .45rem; }
+.terminalBar > span:last-child { color: #7dd3fc; }
+.snapshotFooter { padding: .9rem 1rem .2rem; }
+.snapshotFooter > span { display: block; margin-bottom: .65rem; color: #71859a; font: 500 .62rem var(--font-mono); letter-spacing: .1em; text-transform: uppercase; }
+.snapshot .chips { padding: 0 1rem; gap: .4rem; }
+.snapshot .chip { padding: .3rem .52rem; border-radius: .45rem; font-size: .64rem; }
+.snapshot .scrollCue { margin: .7rem 1rem 1rem; font-size: .65rem; }
+
+@media (max-width: 768px) {
+  .copyInner { align-items: flex-start; text-align: left; }
+  .status { align-self: flex-start; }
+  .highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .highlightCard { min-height: auto; padding: .7rem; }
+  .highlightValue { font-size: .76rem; }
+  .snapshotHeader { flex-direction: row; }
+  .snapshot { max-width: none; }
+}
+@media (max-width: 520px) {
+  .highlights { grid-template-columns: 1fr; }
+  .codeCanvas { font-size: .58rem; }
+  .terminalBar { font-size: .55rem; }
+  .editorLanguage { display: none; }
+}
+/* Keep the ambient motion slow so content stays easy to read. */
+.namePart:nth-child(2) { animation: none; }
+.highlightCard { animation: none; }
+.avatarRing::before { animation-duration: 18s; }

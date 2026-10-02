@@ -10,7 +10,7 @@ export function Education() {
     <section id="education" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
-          <SectionHeader label="Education" title="Academic background" gradient />
+          <SectionHeader label="02 · EDUCATION" title="Academic background" gradient />
         </FadeIn>
         <div className={styles.list}>
           {education.map((item, index) => (

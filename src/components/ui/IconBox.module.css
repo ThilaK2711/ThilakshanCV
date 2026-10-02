@@ -32,32 +32,32 @@
 
 .indigo {
   color: var(--color-indigo);
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.25);
+  background: rgba(125, 211, 252, 0.1);
+  border-color: rgba(125, 211, 252, 0.25);
 }
 
 .cyan {
   color: var(--color-cyan);
-  background: rgba(34, 211, 238, 0.1);
-  border-color: rgba(34, 211, 238, 0.25);
+  background: rgba(125, 211, 252, 0.1);
+  border-color: rgba(125, 211, 252, 0.25);
 }
 
 .violet {
   color: var(--color-violet);
-  background: rgba(167, 139, 250, 0.1);
-  border-color: rgba(167, 139, 250, 0.25);
+  background: rgba(136, 180, 204, 0.1);
+  border-color: rgba(136, 180, 204, 0.25);
 }
 
 .emerald {
   color: var(--color-emerald);
-  background: rgba(52, 211, 153, 0.1);
-  border-color: rgba(52, 211, 153, 0.25);
+  background: rgba(125, 211, 252, 0.1);
+  border-color: rgba(125, 211, 252, 0.25);
 }
 
 .pink {
   color: var(--color-pink);
-  background: rgba(244, 114, 182, 0.1);
-  border-color: rgba(244, 114, 182, 0.25);
+  background: rgba(200, 160, 240, 0.1);
+  border-color: rgba(200, 160, 240, 0.25);
 }
 
 .box:hover {

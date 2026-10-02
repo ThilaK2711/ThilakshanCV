@@ -37,6 +37,18 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
         animationDelay: `${delay}s`,
       }}
     >
+      <div className={styles.preview} aria-hidden="true">
+        <div className={styles.previewTop}><span /><span /><span /><i /></div>
+        <div className={styles.previewBody}>
+          <div className={styles.previewSidebar}><i /><i /><i /><i /></div>
+          <div className={styles.previewMain}>
+            <div className={styles.previewHeading} />
+            <div className={styles.previewStats}><i /><i /><i /></div>
+            <div className={styles.previewChart}><i /><i /><i /><i /><i /><i /><i /></div>
+            <div className={styles.previewRows}><i /><i /><i /></div>
+          </div>
+        </div>
+      </div>
       <div className={styles.iconHeader}>
         <IconBox icon={Icon} variant={variant} size="lg" />
       </div>

@@ -1,26 +1,27 @@
 "use client";
 
-import { ArrowRight, Code2, Layers3, Sparkles, Terminal } from "lucide-react";
+import { ArrowRight, Sparkles, Terminal } from "lucide-react";
 import { profile } from "@/data/profile";
 import { Button } from "@/components/ui/Button";
 import { StaggerChildren, StaggerItem } from "@/components/ui/StaggerChildren";
 import styles from "./Hero.module.css";
 
-const stackChips = ["React", "Next.js", "Node.js", "Java", "Python", "React Native"];
+const stackChips = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "Java",
+  "Python",
+  "React Native",
+  "Flutter",
+  ".NET",
+  "PostgreSQL",
+];
 
 const highlights = [
-  {
-    label: "Focus",
-    value: "Full-stack web and mobile",
-  },
-  {
-    label: "Style",
-    value: "Clean UI, performance, motion",
-  },
-  {
-    label: "Mindset",
-    value: "Practical, user-first, always learning",
-  },
+  { label: "Education", value: "Software Engineering · SLIIT" },
+  { label: "Focus", value: "Full-stack web and mobile" },
+  { label: "Location", value: "Jaffna, Sri Lanka" },
 ];
 
 export function Hero() {
@@ -35,7 +36,7 @@ export function Hero() {
               <StaggerItem>
                 <div className={styles.status}>
                   <span className={styles.dot} />
-                  Open to opportunities
+                  Available for opportunities
                 </div>
               </StaggerItem>
               <StaggerItem>
@@ -81,47 +82,37 @@ export function Hero() {
           </StaggerItem>
           <StaggerItem className={styles.visual}>
             <div className={`glass-card ${styles.snapshot}`}>
-              <div className={styles.snapshotHeader}>
-                <span className={styles.snapshotTitle}>Developer snapshot</span>
-                <span className={styles.snapshotBadge}>
-                  <Sparkles size={12} aria-hidden="true" />
-                  Ready to build
-                </span>
+              <div className={styles.editorBar}>
+                <span className={styles.windowDots} aria-hidden="true"><i /><i /><i /></span>
+                <span className={styles.snapshotTitle}>thilakshan.config.ts</span>
+                <span className={styles.editorLanguage}>TYPESCRIPT</span>
               </div>
-              <div className={styles.snapshotBody}>
-                <div className={styles.snapshotRow}>
-                  <Code2 size={18} aria-hidden="true" />
-                  <div>
-                    <p>Frontend</p>
-                    <span>Interfaces with polish and motion</span>
-                  </div>
+              <div className={styles.codeCanvas} aria-label="Developer profile code preview">
+                <div><span className={styles.lineNumber}>01</span><span className={styles.codeComment}>// A little about what I build</span></div>
+                <div><span className={styles.lineNumber}>02</span><span className={styles.codeKeyword}>export const</span> <span className={styles.codeName}>developer</span> = {"{"}</div>
+                <div><span className={styles.lineNumber}>03</span>  <span className={styles.codeKey}>name</span>: <span className={styles.codeString}>&quot;Lingeswaran Thilakshan&quot;</span>,</div>
+                <div><span className={styles.lineNumber}>04</span>  <span className={styles.codeKey}>education</span>: <span className={styles.codeString}>&quot;Software Engineering · SLIIT&quot;</span>,</div>
+                <div><span className={styles.lineNumber}>05</span>  <span className={styles.codeKey}>location</span>: <span className={styles.codeString}>&quot;Jaffna, Sri Lanka&quot;</span>,</div>
+                <div><span className={styles.lineNumber}>06</span>  <span className={styles.codeKey}>stack</span>: {"{"}</div>
+                <div><span className={styles.lineNumber}>07</span>    <span className={styles.codeKey}>frontend</span>: [<span className={styles.codeString}>&quot;React&quot;</span>, <span className={styles.codeString}>&quot;Next.js&quot;</span>],</div>
+                <div><span className={styles.lineNumber}>08</span>    <span className={styles.codeKey}>backend</span>: [<span className={styles.codeString}>&quot;Java&quot;</span>, <span className={styles.codeString}>&quot;.NET&quot;</span>, <span className={styles.codeString}>&quot;Node.js&quot;</span>, <span className={styles.codeString}>&quot;Python&quot;</span>],</div>
+                <div><span className={styles.lineNumber}>09</span>    <span className={styles.codeKey}>data</span>: [<span className={styles.codeString}>&quot;PostgreSQL&quot;</span>],</div>
+                <div><span className={styles.lineNumber}>10</span>    <span className={styles.codeKey}>mobile</span>: [<span className={styles.codeString}>&quot;React Native&quot;</span>, <span className={styles.codeString}>&quot;Flutter&quot;</span>]
                 </div>
-                <div className={styles.snapshotRow}>
-                  <Terminal size={18} aria-hidden="true" />
-                  <div>
-                    <p>Backend</p>
-                    <span>APIs, logic, and clean integrations</span>
-                  </div>
-                </div>
-                <div className={styles.snapshotRow}>
-                  <Layers3 size={18} aria-hidden="true" />
-                  <div>
-                    <p>Stack</p>
-                    <span>React, Next.js, Java, Node.js, Python</span>
-                  </div>
+                <div><span className={styles.lineNumber}>11</span>  {"}"}</div>
+                <div><span className={styles.lineNumber}>12</span>{"}"};<span className={styles.cursor} aria-hidden="true" /></div>
+              </div>
+              <div className={styles.terminalBar}>
+                <span><Terminal size={14} aria-hidden="true" /> building useful things</span>
+                <span><Sparkles size={13} aria-hidden="true" /> READY TO BUILD</span>
+              </div>
+              <div className={styles.snapshotFooter}>
+                <span>Technology I work with</span>
+                <div className={styles.chips}>
+                  {stackChips.map((chip) => <span key={chip} className={styles.chip}>{chip}</span>)}
                 </div>
               </div>
-              <div className={styles.chips}>
-                {stackChips.map((chip) => (
-                  <span key={chip} className={styles.chip}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-              <a href="#about" className={styles.scrollCue}>
-                Explore more
-                <ArrowRight size={14} aria-hidden="true" />
-              </a>
+              <a href="#about" className={styles.scrollCue}>Explore portfolio <ArrowRight size={14} aria-hidden="true" /></a>
             </div>
           </StaggerItem>
         </StaggerChildren>

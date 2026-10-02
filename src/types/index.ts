@@ -31,6 +31,7 @@ export interface Profile {
   location: string;
   resumeUrl: string;
   github?: string;
+  linkedin?: string;
   avatar?: string;
   socialLinks: SocialLink[];
 }

@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 export function Button({ href, variant = "primary", children }: ButtonProps) {
-  const isExternal = href.startsWith("http") || href.startsWith("mailto");
+  const isExternal = href.startsWith("http");
 
   return (
     <a

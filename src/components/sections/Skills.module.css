@@ -46,11 +46,11 @@
 }
 
 .card_frontend::before {
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-indigo));
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-emerald));
 }
 
 .card_backend::before {
-  background: linear-gradient(90deg, var(--color-violet), var(--color-pink));
+  background: linear-gradient(90deg, var(--color-violet), var(--color-emerald));
 }
 
 .card_tools::before {
@@ -108,7 +108,7 @@
   height: 24rem;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 20px 50px rgba(125, 211, 252, 0.1);
 }
 
 .loadingPlaceholder {
@@ -116,9 +116,9 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    rgba(99, 102, 241, 0.1),
-    rgba(99, 102, 241, 0.05),
-    rgba(99, 102, 241, 0.1)
+    rgba(125, 211, 252, 0.1),
+    rgba(125, 211, 252, 0.05),
+    rgba(125, 211, 252, 0.1)
   );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
@@ -133,8 +133,8 @@
   height: 350px;
   border-radius: 1rem;
   overflow: hidden;
-  background: rgba(99, 102, 241, 0.05);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: rgba(125, 211, 252, 0.05);
+  border: 1px solid rgba(125, 211, 252, 0.1);
 }
 
 @keyframes skill-card-float {
@@ -178,3 +178,4 @@
     grid-column: span 1;
   }
 }
+.category { animation: none; }

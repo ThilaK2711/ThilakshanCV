@@ -23,9 +23,9 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    rgba(99, 102, 241, 0.1),
-    rgba(99, 102, 241, 0.05),
-    rgba(99, 102, 241, 0.1)
+    rgba(125, 211, 252, 0.1),
+    rgba(125, 211, 252, 0.05),
+    rgba(125, 211, 252, 0.1)
   );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
@@ -64,8 +64,8 @@
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--color-cyan), var(--color-indigo));
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-emerald));
+  box-shadow: 0 0 14px rgba(125, 211, 252, 0.45);
 }
 
 .location {
@@ -130,7 +130,7 @@
 .avatarInitials {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-indigo);
+  color: var(--color-cyan);
   letter-spacing: -0.02em;
 }
 

@@ -41,39 +41,39 @@
 
 .default:hover {
   color: var(--color-text);
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+  border-color: rgba(125, 211, 252, 0.4);
+  box-shadow: 0 4px 12px rgba(125, 211, 252, 0.15);
 }
 
 .frontend {
   color: var(--color-cyan);
-  border: 1px solid rgba(34, 211, 238, 0.3);
-  background: rgba(34, 211, 238, 0.07);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  background: rgba(125, 211, 252, 0.07);
 }
 
 .frontend:hover {
-  box-shadow: 0 4px 16px rgba(34, 211, 238, 0.2);
-  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 4px 16px rgba(125, 211, 252, 0.2);
+  border-color: rgba(125, 211, 252, 0.5);
 }
 
 .backend {
   color: var(--color-violet);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  background: rgba(167, 139, 250, 0.07);
+  border: 1px solid rgba(136, 180, 204, 0.3);
+  background: rgba(136, 180, 204, 0.07);
 }
 
 .backend:hover {
-  box-shadow: 0 4px 16px rgba(167, 139, 250, 0.2);
-  border-color: rgba(167, 139, 250, 0.5);
+  box-shadow: 0 4px 16px rgba(136, 180, 204, 0.2);
+  border-color: rgba(136, 180, 204, 0.5);
 }
 
 .tools {
   color: var(--color-emerald);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  background: rgba(52, 211, 153, 0.07);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  background: rgba(125, 211, 252, 0.07);
 }
 
 .tools:hover {
-  box-shadow: 0 4px 16px rgba(52, 211, 153, 0.2);
-  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 4px 16px rgba(125, 211, 252, 0.2);
+  border-color: rgba(125, 211, 252, 0.5);
 }

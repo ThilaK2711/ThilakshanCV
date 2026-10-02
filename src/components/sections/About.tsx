@@ -18,7 +18,7 @@ export function About() {
     <section id="about" className="section" data-cinematic="section">
       <div className="container">
         <FadeIn>
-          <SectionHeader label="01" title="About Me" gradient />
+          <SectionHeader label="01 · ABOUT ME" title="Thoughtful software, built with care" gradient />
         </FadeIn>
         <div className={styles.grid}>
           <FadeIn delay={0.08} className={styles.content}>
