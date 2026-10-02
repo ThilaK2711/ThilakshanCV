@@ -33,3 +33,9 @@
 .socialLink:hover {
   color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}

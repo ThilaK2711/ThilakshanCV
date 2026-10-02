@@ -1,5 +1,4 @@
 import { FolderGit2, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
 import type { Project } from "@/types";
 import { projectIconMap } from "@/lib/iconMap";
 import { Badge } from "./Badge";
@@ -8,7 +7,6 @@ import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {
   project: Project;
-  delay?: number;
 }
 
 const iconVariants = {
@@ -17,25 +15,13 @@ const iconVariants = {
   mobile: "pink" as const,
 };
 
-export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = projectIconMap[project.icon];
   const variant = iconVariants[project.icon];
 
   return (
-    <motion.article
+    <article
       className={`glass-card ${styles.card}`}
-      data-cinematic="reveal"
-      whileHover={{
-        y: -8,
-        scale: 1.012,
-        rotateX: 2,
-        rotateY: -2,
-      }}
-      transition={{ type: "spring", stiffness: 220, damping: 18 }}
-      style={{
-        transformStyle: "preserve-3d",
-        animationDelay: `${delay}s`,
-      }}
     >
       <div className={styles.preview} aria-hidden="true">
         <div className={styles.previewTop}><span /><span /><span /><i /></div>
@@ -75,6 +61,6 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
@@ -15,7 +13,7 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="section" data-cinematic="section">
+    <section id="about" className="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="01 · ABOUT ME" title="Thoughtful software, built with care" gradient />
@@ -44,7 +42,6 @@ export function About() {
                     alt={profile.name}
                     fill
                     className={styles.avatarPhoto}
-                    priority
                   />
                 ) : (
                   <span className={styles.avatarInitials}>

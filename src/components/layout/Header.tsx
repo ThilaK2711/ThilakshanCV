@@ -19,7 +19,7 @@ export function Header() {
             <small>SLIIT · SOFTWARE ENGINEERING</small>
           </span>
         </a>
-        <nav className={styles.nav}>
+        <nav className={styles.nav} aria-label="Main navigation">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}

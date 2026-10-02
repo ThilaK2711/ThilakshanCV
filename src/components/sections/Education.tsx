@@ -7,7 +7,7 @@ import styles from "./Education.module.css";
 
 export function Education() {
   return (
-    <section id="education" className="section" data-cinematic="section">
+    <section id="education" className="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="02 · EDUCATION" title="Academic background" gradient />

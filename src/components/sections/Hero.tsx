@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowRight, Sparkles, Terminal } from "lucide-react";
 import { profile } from "@/data/profile";
 import { Button } from "@/components/ui/Button";
@@ -28,7 +26,7 @@ export function Hero() {
   const nameParts = profile.name.split(" ");
 
   return (
-    <section id="hero" className={`section ${styles.hero}`} data-cinematic="section">
+    <section id="hero" className={`section ${styles.hero}`}>
       <div className={`container ${styles.inner}`}>
         <StaggerChildren className={styles.content}>
           <StaggerItem className={styles.copy}>

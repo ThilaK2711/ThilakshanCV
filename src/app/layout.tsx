@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
-import { CinematicMotion } from "@/components/ui/CinematicMotion";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,7 +35,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <BackgroundEffects />
-        <CinematicMotion />
         <Header />
         <main>{children}</main>
         <Footer />

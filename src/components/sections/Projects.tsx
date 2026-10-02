@@ -1,5 +1,3 @@
-"use client";
-
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -10,7 +8,7 @@ export function Projects() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section id="projects" className="section" data-cinematic="section">
+    <section id="projects" className="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="04 · SELECTED WORK" title="Applications built to solve real problems" gradient />
@@ -18,7 +16,7 @@ export function Projects() {
         <div className={styles.grid}>
           {featured.map((project, index) => (
             <FadeIn key={project.id} delay={index * 0.1}>
-              <ProjectCard project={project} delay={index * 0.45} />
+              <ProjectCard project={project} />
             </FadeIn>
           ))}
         </div>

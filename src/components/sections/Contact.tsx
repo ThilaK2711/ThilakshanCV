@@ -14,7 +14,7 @@ export function Contact() {
     "?text=Hi%20Lingeswaran%2C%20I%20found%20your%20portfolio.";
 
   return (
-    <section id="contact" className={"section " + styles.contact} data-cinematic="section">
+    <section id="contact" className={"section " + styles.contact}>
       <div className="container">
         <FadeIn>
           <SectionHeader label="05 · GET IN TOUCH" title="Let’s build something useful" gradient />

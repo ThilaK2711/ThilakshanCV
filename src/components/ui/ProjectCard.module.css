@@ -90,7 +90,7 @@
 .previewHeading { width: 38%; height: 7px; border-radius: 4px; background: rgba(224,232,240,.65); }
 .previewStats { display: flex; gap: 6px; }
 .previewStats i { flex: 1; height: 25px; border: 1px solid rgba(125,211,252,.14); border-radius: 4px; background: linear-gradient(135deg,rgba(125,211,252,.1),rgba(26,36,56,.55)); }
-.previewChart { display: flex; align-items: end; gap: 4px; height: 42px; padding: 4px 8px; border: 1px solid rgba(160,180,196,.1); border-radius: 4px; }
+.previewChart { display: flex; align-items: flex-end; gap: 4px; height: 42px; padding: 4px 8px; border: 1px solid rgba(160,180,196,.1); border-radius: 4px; }
 .previewChart i { flex: 1; height: 30%; background: rgba(125,211,252,.65); border-radius: 3px 3px 0 0; }
 .previewChart i:nth-child(2), .previewChart i:nth-child(6) { height: 65%; }
 .previewChart i:nth-child(3), .previewChart i:nth-child(5) { height: 45%; }

@@ -166,6 +166,10 @@
   .torusContainer {
     display: none;
   }
+
+  .cubeContainer {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {

@@ -1,5 +1,3 @@
-"use client";
-
 import { skills, skillCategories } from "@/data/skills";
 import { skillCategoryIcons } from "@/lib/iconMap";
 import { Badge } from "@/components/ui/Badge";
@@ -21,7 +19,7 @@ export function Skills() {
   >;
 
   return (
-    <section id="skills" className="section" data-cinematic="section">
+    <section id="skills" className="section">
       <div className="container">
         <FadeIn>
           <SectionHeader label="03 · SKILLS" title="Tools I build with" gradient />
